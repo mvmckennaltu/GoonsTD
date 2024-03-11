@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using TMPro;
 public class EnemyBase : MonoBehaviour
 {
     public GameObject[] waypoints;
@@ -17,7 +17,7 @@ public class EnemyBase : MonoBehaviour
     public GameObject projectilePrefab;
     public float shootingInterval = 1f;
     private float shootingTimer;
-
+    
     // Start is called before the first frame update
     void Start()
     {

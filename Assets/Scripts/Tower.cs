@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -12,6 +13,7 @@ public class Tower : MonoBehaviour
     public int towerType = 0;
     public LayerMask enemyMask;
     public GameObject projectilePrefab;
+    public TextMeshProUGUI HPtext;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,11 @@ public class Tower : MonoBehaviour
         {
             ShootEnemies();
         }
+        if(HPtext != null)
+        {
+            HPtext.text = HPtext.ToString();
+        }
+        
 
     }
     public void TakeDamage(int damage)
